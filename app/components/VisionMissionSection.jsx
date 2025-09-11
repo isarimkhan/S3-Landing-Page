@@ -30,7 +30,7 @@ export default function VisionMissionSection() {
             {/* Vision */}
             <div>
             <div className="flex flex-col gap-2 mb-6  ">
-  <div className="w-20 h-20 border-2 border-gray-300 rounded-full bg-blue-50 text-[#39BEF1] flex items-center justify-center">
+  <div className="w-17 h-17 border-2 border-gray-300 rounded-full bg-blue-50 text-[#39BEF1] flex items-center justify-center cursor-pointer">
     <Goal size={40} />
   </div>
   <h3 className="text-3xl font-semibold">Vision</h3>
@@ -47,7 +47,7 @@ export default function VisionMissionSection() {
             {/* Mission */}
             <div>
               <div className="flex flex-col  gap-3 mb-6">
-                <div className="w-20 h-20 border-2 border-gray-300 rounded-full bg-blue-50 text-[#39BEF1] flex items-center justify-center">
+                <div className="w-17 h-17 border-2 border-gray-300 rounded-full bg-blue-50 text-[#39BEF1] flex items-center justify-center cursor-pointer">
                   <Flag size={40} />
                 </div>
                 <h3 className="text-3xl font-semibold">Mission</h3>

@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-full h-260 flex items-center">
+    <section className="relative w-full min-h-[80vh] flex items-center">
       {/* Background Image */}
       <Image
         src="/images/banner.png"
@@ -11,19 +11,19 @@ export default function HeroSection() {
         className="object-cover"
         priority
       />
-      
-      {/* Dark Overlay for better text readability */}
-      <div className="absolute inset-0 bg-opacity-40 z-10"></div>
-      
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 z-10"></div>
+
       {/* Overlay Content */}
-      <div className="relative z-20s ml-15 mx-auto px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-16 w-full">
+      <div className="relative z-20 mx-auto max-w-7xl px-6 md:px-12 lg:px-16 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 py-16">
         {/* Text Section */}
-        <div className="text-left text-white max-w-2xl">
-          <p className="text-md font-medium uppercase tracking-wide text-gray-200 mb-2">
+        <div className="text-center lg:text-left text-white max-w-2xl">
+          <p className="text-sm sm:text-base font-medium uppercase tracking-wide text-gray-200 mb-2">
             # All-in-One School Management & Learning Platform
           </p>
-          
-          <h1 className="text-7xl font-medium font-quicksand leading-tight mb-6">
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-quicksand leading-tight mb-6">
             Smart{" "}
             <span className="relative inline-block">
               Tools
@@ -32,32 +32,32 @@ export default function HeroSection() {
             for <br />
             Faith-Based <br /> Education
           </h1>
-          
-          <p className="text-lg text-gray-200 mb-8">
-            Smart School Solutions (S3) is an all-in-one education platform built to
-            help schools and madrassahs streamline operations, enrich learning, and
-            connect administrators, teachers, students, and parents in one
+
+          <p className="text-base sm:text-lg text-gray-200 mb-8">
+            Smart School Solutions (S3) is an all-in-one education platform built
+            to help schools and madrassahs streamline operations, enrich learning,
+            and connect administrators, teachers, students, and parents in one
             user-friendly system.
           </p>
-          
-          <div className="flex gap-4">
-            <button className="bg-cyan-400 h-12 w-40 text-lg hover:bg-[#057DFA] text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <button className="bg-cyan-400 h-12 w-40 text-lg cursor-pointer hover:bg-[#057DFA] text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
               Get Started
             </button>
-            <button className="bg-white text-lg h-12 w-40 text-[#0DB2F0] hover:bg-[#057DFA] hover:text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
+            <button className="bg-white text-lg h-12 w-40 cursor-pointer text-[#0DB2F0] hover:bg-[#057DFA] hover:text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
               Pricing
             </button>
           </div>
         </div>
-        
+
         {/* Right Side Image */}
-        <div className="relative flex flex-col items-center mr-25">
+        <div className="relative flex justify-center lg:justify-end w-full lg:w-1/2">
           <Image
             src="/images/1.png"
             alt="Dashboard"
-            width={900}
-            height={900}
-            className=""
+            width={700}
+            height={700}
+            className="w-full max-w-[500px] h-auto"
           />
         </div>
       </div>

@@ -7,10 +7,9 @@ import {
   Handshake,
   ChartNoAxesCombined,
   ClipboardCheck,
-  ClipboardClock,
   Video,
-  Smartphone ,
-  Funnel
+  Smartphone,
+  Funnel,
 } from "lucide-react";
 
 const features = [
@@ -18,15 +17,13 @@ const features = [
     title: "School Management Module",
     description:
       "Efficiently manage student records, attendance, class schedules, and parent communication.",
-    icon: Monitor ,
+    icon: Monitor,
   },
   {
     title: "Academic Learning Module",
     description:
       "Create curriculum, assign and grade tasks, and track academic progress with ease.",
     icon: BookOpen,
-    bg: "bg-blue-50",
-    hover: "hover:bg-blue-100"
   },
   {
     title: "Islamic & Quranic Learning",
@@ -52,56 +49,64 @@ const features = [
       "Assign internal tasks, set deadlines, and receive reminders — for smoother school operations.",
     icon: ClipboardCheck,
   },
-    {
+  {
     title: "Support Helpdesk / Ticketing",
     description:
       "Let parents and staff raise support tickets and manage queries centrally and transparently.",
     icon: Handshake,
   },
-    {
+  {
     title: "Inventory & Asset Management",
     description:
       "Track school assets, supplies, and inventory across locations with full control and visibility.",
-    icon:Funnel,
+    icon: Funnel,
   },
-    {
+  {
     title: "Online Shop",
     description:
-      "Sell school-related items such as uniforms, books, and supplies directly to parents or students online..",
+      "Sell school-related items such as uniforms, books, and supplies directly to parents or students online.",
     icon: Smartphone,
   },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 bg-white text-center px-6">
+    <section className="py-16 sm:py-20 bg-white text-center px-4 sm:px-6 lg:px-8">
+      {/* Header */}
       <div className="max-w-4xl mx-auto mb-12">
-        <p className="text-blue-600 font-semibold text-lg mb-2"># <span className="text-black"> Key Features</span></p>
-        <h2 className="text-3xl sm:text-5xl font-medium font-quicksand mb-4">
+        <p className="text-blue-600 font-semibold text-base sm:text-lg mb-2">
+          # <span className="text-black">Key Features</span>
+        </p>
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-medium font-quicksand mb-4 leading-snug">
           Everything Your School Needs — In One Smart System
         </h2>
-        <p className="text-[#7A7A7A] font-inter text-lg">
-          Smart School Solutions brings together powerful tools to manage, teach, and
-          grow your school with ease. Whether you're running a full academic
+        <p className="text-gray-600 font-inter text-base sm:text-lg">
+          Smart School Solutions brings together powerful tools to manage, teach,
+          and grow your school with ease. Whether you're running a full academic
           institution, a madrassah, or a blended model, our features help you
           streamline operations, track progress, and improve communication —
           all under one roof.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
         {features.map((feature, index) => {
           const Icon = feature.icon;
           return (
             <div
               key={index}
-              className="flex flex-col items-center text-center"
+              className="flex flex-col items-center text-center px-4 py-6 rounded-xl hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-gray-200 bg-gray-50 text-[#0DB2F0] hover:bg-[#F1FAFE] transition-colors duration-700 flex items-center justify-center mb-4 ">
-                <Icon size={28} />
+              <div className="sm:w-15 sm:h-15 rounded-full border-2 border-gray-200 bg-gray-50 text-[#0DB2F0] hover:bg-[#F1FAFE] transition-colors duration-500 flex items-center justify-center mb-4">
+                <Icon size={28} className="sm:size-10" />
               </div>
-              <h3 className="text-2xl font-inter font-medium mb-2">{feature.title}</h3>
-              <p className="text-[#7A7A7A] font-inter text-lg font-medium">{feature.description}</p>
+              <h3 className="text-xl sm:text-2xl font-inter font-medium mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 font-inter text-sm sm:text-base md:text-lg font-medium">
+                {feature.description}
+              </p>
             </div>
           );
         })}
