@@ -23,6 +23,9 @@ const inter = Inter({
 export const metadata = {
   title: "Smart School Solution – Smart Tools for Faith-Based Education",
   description: "S3-landing-Page",
+   icons: {
+    icon: "/images/fav1.png",
+  },
 };
 export default function RootLayout({ children }) {
   return (

@@ -11,15 +11,15 @@ export default function Home() {
   return (
     <div className= "bg-gray-50">
   
-   <Navbar />
-   <Cookies />
-   <Hero /> 
-   <FeaturesSection />
-    <VisionMissionSection />
-    <Choose/>
+  <Navbar />
+  <Cookies />
+  <Hero /> 
+  <FeaturesSection />
+  <VisionMissionSection />
+  <Choose/>
   <Scalable />
-<Real/>
-<About/>
+  <Real/>
+  <About/>
     </div>
   );
 }

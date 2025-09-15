@@ -35,7 +35,8 @@ export default function CookieConsent() {
     </h2>
   </div>
         <p className="text-gray-600 text-base mb-6">
-          We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better expe rience. By clicking accept, you agree to this, as outlined in our Cookie Policy.
+          We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better
+        experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
           <button
