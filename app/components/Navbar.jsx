@@ -2,12 +2,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Search } from "lucide-react"; // lucide-react icons
+import { Menu, X } from "lucide-react"; // lucide-react icons
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
+  const [modulesOpen, setModulesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,29 +33,118 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-12 font-normal font-inter text-lg">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li className="flex items-center gap-1 cursor-pointer">
-            Modules <span className="text-xs">▼</span>
+        <ul className="hidden md:flex space-x-12 font-normal font-inter text-lg relative">
+       <li><Link href="/e404">Home</Link></li>
+          <li><Link href="/e404">About</Link></li>
+
+          {/* Modules Dropdown */}
+          <li
+            className="relative flex items-center gap-1 cursor-pointer"
+            onMouseEnter={() => setModulesOpen(true)}
+            onMouseLeave={() => setModulesOpen(false)}
+          >
+            Modules{" "}
+            <span
+              className={`text-xs transition-transform duration-300 ${
+                modulesOpen ? "rotate-180" : ""
+              }`}
+            >
+              ▼
+            </span>
+            <div
+              className={`absolute top-full left-0 mt-2 font-medium font-quicksand text-md bg-white text-[#888686] shadow-lg rounded-lg overflow-hidden transition-all duration-500 ${
+                modulesOpen ? "max-h-150 opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <ul className="w-70">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">School Management</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">
+                  Academic Leaning Module</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Islamic Learing</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Admission Leads CRM</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Finance Management</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Franchis Management</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Tasks & Reminder</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Suppport Helpdesk / Ticketing</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Inventory & Asset Management</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">Online Shop</Link>
+                </li>
+                
+              </ul>
+            </div>
           </li>
-          <li className="flex items-center gap-1 cursor-pointer">
-            Solutions <span className="text-xs">▼</span>
+
+          {/* Solutions Dropdown */}
+          <li
+            className="relative flex items-center gap-1 cursor-pointer"
+            onMouseEnter={() => setSolutionsOpen(true)}
+            onMouseLeave={() => setSolutionsOpen(false)}
+          >
+            Solutions{" "}
+            <span
+              className={`text-xs transition-transform duration-300 ${
+                solutionsOpen ? "rotate-180" : ""
+              }`}
+            >
+              ▼
+            </span>
+            <div
+              className={`absolute top-full left-0 mt-2 font-medium font-quicksand text-md bg-white text-[#888686] shadow-lg rounded-lg overflow-hidden transition-all duration-500 ${
+                solutionsOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <ul className="w-90">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">For Schools & Institutes</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">For Madrassahs</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">For Parents & Guardians</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <Link href="/e404">For Hifz Teachers & Quran Programs</Link>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li><Link href="/pricing">Pricing</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+
+          <li><Link href="/e404">Pricing</Link></li>
+          <li><Link href="/e404">Contact</Link></li>
         </ul>
 
         {/* Book A Demo Button (desktop only) */}
         <div className="hidden md:block mr-25">
-          <button className="group relative cursor-pointer bg-[#0DB2F0] h-12 w-40 text-white text-lg px-6 py-2 rounded-full font-semibold overflow-hidden">
-            <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
-              Book A Demo
-            </span>
-            <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-              Book A Demo
-            </span>
-          </button>
+          <Link href="/e404">
+            <button className="group relative cursor-pointer bg-[#0DB2F0] h-12 w-40 text-white text-lg px-6 py-2 rounded-full font-semibold overflow-hidden">
+              <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
+                Book A Demo
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+                Book A Demo
+              </span>
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -74,28 +164,12 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col p-6 space-y-6 mt-20">
-          {/* Search Box */}
-          <div className="relative w-full">
-            <input
-              type="text"
-              placeholder="Search..." 
-              className="w-full rounded-full py-2 pl-4 pr-10 text-black border-2 focus:outline-none"
-            />
-            {/* <Search
-              size={18}
-              className="absolute right-3 top-2.5 text-black"
-            /> */}
-          </div>
-
-          {/* Nav Links */}
           <Link href="/" onClick={() => setOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setOpen(false)}>About</Link>
           <div className="cursor-pointer">Modules ▼</div>
           <div className="cursor-pointer">Solutions ▼</div>
           <Link href="/pricing" onClick={() => setOpen(false)}>Pricing</Link>
           <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
-
-          {/* Button */}
           <button className="w-full bg-[#0DB2F0] text-white py-3 rounded-full font-semibold">
             Book A Demo
           </button>

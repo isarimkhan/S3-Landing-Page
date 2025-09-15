@@ -10,8 +10,8 @@ import {
   Video,
   Smartphone,
   Funnel,
+  Link,
 } from "lucide-react";
-
 const features = [
   {
     title: "School Management Module",
@@ -94,12 +94,13 @@ export default function FeaturesSection() {
         {features.map((feature, index) => {
           const Icon = feature.icon;
           return (
+            
             <div
               key={index}
-              className="flex flex-col items-center text-center px-4 py-6 rounded-xl hover:shadow-md transition-shadow duration-300"
+              className="flex flex-col items-center text-center px-4 py-6 rounded-xl transition-shadow duration-300"
             >
               <div className="sm:w-15 sm:h-15 rounded-full border-2 border-gray-200 bg-gray-50 text-[#0DB2F0] hover:bg-[#F1FAFE] transition-colors duration-500 flex items-center justify-center mb-4">
-                <Icon size={28} className="sm:size-10" />
+                <Icon size={28} className="sm:size-7 " />
               </div>
               <h3 className="text-xl sm:text-2xl font-inter font-medium mb-2">
                 {feature.title}

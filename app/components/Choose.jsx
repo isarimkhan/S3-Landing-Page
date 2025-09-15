@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Choose() {
   return (
     <main className="bg-gray-100 text-gray-800">
@@ -15,6 +15,7 @@ export default function Choose() {
             Bring simplicity, insight, and purpose to every classroom.
           </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <Link href="/e404">
             <button className="group relative cursor-pointer bg-[#0DB2F0] h-12 sm:h-14 w-full sm:w-40 text-white text-base sm:text-lg px-6 rounded-full font-semibold overflow-hidden">
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
                 Pricing
@@ -31,6 +32,7 @@ export default function Choose() {
                 Contact
               </span>
             </button>
+            </Link>
           </div>
         </div>
       </section>
