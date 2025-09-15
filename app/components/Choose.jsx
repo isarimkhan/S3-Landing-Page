@@ -14,24 +14,28 @@ export default function Choose() {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-quicksand mb-6">
             Bring simplicity, insight, and purpose to every classroom.
           </h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-2">
             <Link href="/e404">
-            <button className="group relative cursor-pointer bg-[#0DB2F0] h-12 sm:h-14 w-full sm:w-40 text-white text-base sm:text-lg px-6 rounded-full font-semibold overflow-hidden">
-              <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
-                Pricing
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-                Pricing
-              </span>
-            </button>
-            <button className="group relative cursor-pointer border h-12 sm:h-14 w-full sm:w-40 text-black text-base sm:text-lg px-6 rounded-full font-semibold overflow-hidden">
-              <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
-                Contact
-              </span>
-              <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
-                Contact
-              </span>
-            </button>
+            <div className="flex gap-2 sm:gap-4">
+  <button className="group relative cursor-pointer bg-[#0DB2F0] h-8 sm:h-10 w-28 sm:w-32 text-white text-sm sm:text-base px-4 rounded-full font-medium overflow-hidden">
+    <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
+      Pricing
+    </span>
+    <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+      Pricing 
+    </span>
+  </button>
+
+  <button className="group relative cursor-pointer border h-8 sm:h-10 w-24 sm:w-32 text-black text-sm sm:text-base px-4 rounded-full font-medium overflow-hidden">
+    <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-full">
+      Contact
+    </span>
+    <span className="absolute inset-0 flex items-center justify-center translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+      Contact
+    </span>
+  </button>
+</div>
+
             </Link>
           </div>
         </div>

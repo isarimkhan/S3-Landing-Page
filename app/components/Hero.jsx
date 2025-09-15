@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 export default function HeroSection() {
@@ -23,15 +25,30 @@ export default function HeroSection() {
             # All-in-One School Management & Learning Platform
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-quicksand leading-tight mb-6">
-            Smart{" "}
-            <span className="relative inline-block">
-              Tools
-              <span className="absolute left-0 bottom-1 w-full h-2 bg-yellow-400 -z-10 rounded-full"></span>
-            </span>{" "}
-            for <br />
-            Faith-Based <br /> Education
-          </h1>
+         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-quicksand leading-tight mb-6">
+  Smart{" "}
+  <span className="relative inline-block">
+    Tools
+    <span
+      className="absolute left-0 bottom-1 h-2 bg-yellow-400 -z-10 rounded-full"
+      style={{
+        width: "100%",
+        animation: "underlineSlide 1.2s ease-out forwards",
+      }}
+    ></span>
+  </span>{" "}
+  for <br />
+  Faith-Based <br /> Education
+</h1>
+
+<style>{`
+  @keyframes underlineSlide {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+`}</style>
+
+
 
           <p className="text-base sm:text-lg text-gray-200 mb-8">
             Smart School Solutions (S3) is an all-in-one education platform built
@@ -42,12 +59,15 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link href="/e404">
-            <button className="bg-cyan-400 h-12 w-40 text-lg cursor-pointer hover:bg-[#057DFA] text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
-              Get Started
-            </button>
-            <button className="bg-white text-lg h-12 w-40 cursor-pointer text-[#0DB2F0] hover:bg-[#057DFA] hover:text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
-              Pricing
-            </button>
+            <div className="flex gap-6">
+  <button className="bg-cyan-400 h-12 w-40 text-lg cursor-pointer hover:bg-[#057DFA] text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
+    Get Started
+  </button>
+  <button className="bg-white text-lg h-12 w-40 cursor-pointer text-[#0DB2F0] hover:bg-[#057DFA] hover:text-white px-6 py-2 rounded-full font-medium font-sans transition-colors duration-200">
+    Pricing
+  </button>
+</div>
+
             </Link>
           </div>
         </div>
